@@ -1,6 +1,7 @@
 import { useContext } from 'react';
 import './App.css';
 import InputTextField from './InputField';
+import SelectComp from './SelectComp';
 import SimpleForm from './SimpleForm';
 
 function App() {
@@ -10,8 +11,9 @@ function App() {
   return (
     <div className="App">
       <main>
-        <SimpleForm value={{ email: "", password: "" }} onSubmit={handleSubmit}>
+        <SimpleForm value={{ email: "", married: "" }} onSubmit={handleSubmit}>
           <InputTextField name="email" placeholder="Email field" />
+          <SelectComp values={["Married", "Unmarried"]} label="Are you married" name="married" />
         </SimpleForm>
       </main>
     </div>
