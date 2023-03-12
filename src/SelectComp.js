@@ -13,7 +13,7 @@ function SelectComp({ name = "", label = "", values = [] }) {
         }
     }, [formContext.values, name])
     return (
-        <>
+        <div>
             <label htmlFor={name}>{label}</label>
             <select name={name} onChange={(e) => {
                 formContext.onChange(name, e.target.value, (val) => val !== "")
@@ -26,7 +26,7 @@ function SelectComp({ name = "", label = "", values = [] }) {
                     ))
                 }
             </select>
-        </>
+        </div>
     )
 }
 

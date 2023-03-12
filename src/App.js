@@ -12,7 +12,7 @@ function App() {
     <div className="App">
       <main>
         <SimpleForm value={{ email: "", married: "" }} onSubmit={handleSubmit}>
-          <InputTextField name="email" placeholder="Email field" />
+          <InputTextField name="email" placeholder="Email field" errortxt='Enter valid email' />
           <SelectComp values={["Married", "Unmarried"]} label="Are you married" name="married" />
         </SimpleForm>
       </main>
